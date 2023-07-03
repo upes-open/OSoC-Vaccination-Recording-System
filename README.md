@@ -1,1 +1,1 @@
-# Osoc-Vaccination-Recording-System
+# OSoC-Vaccination-Recording-System
