@@ -8,7 +8,6 @@
 
 
 
-![Static Badge](https://img.shields.io/badge/Discord-202020?logo=discord&logoColor=%235865F2&link=http%3A%2F%2Fdiscord.gg%2F2rnWsvkX) ![Static Badge](https://img.shields.io/badge/Twitter-202020?logo=twitter&logoColor=%231DA1F2&link=https%3A%2F%2Ftwitter.com%2FUpesOpen) ![Static Badge](https://img.shields.io/badge/Instagram-202020?logo=instagram&logoColor=%23E4405F&link=https%3A%2F%2Fwww.instagram.com%2Fupesopen_%2F)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/upes-open/OSoC-Ambulance-Tracking-App) ![GitHub forks](https://img.shields.io/github/forks/upes-open/OSoC-Ambulance-Tracking-App) ![GitHub Repo stars](https://img.shields.io/github/stars/upes-open/OSoC-Ambulance-Tracking-App) ![GitHub issues](https://img.shields.io/github/issues/upes-open/OSoC-Ambulance-Tracking-App)
 
