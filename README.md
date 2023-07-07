@@ -44,7 +44,7 @@ Firebase: ![Static Badge](https://img.shields.io/badge/Firebase-101010?logo=fire
 > * Clone the repo on your local machine.
 >
 ```bash
-git clone https://github.com/upes-open/OSoC-Lost-And-Found-WebApp
+git clone https://github.com/upes-open/OSoC-Vaccination-Recording-System.git
 ```
 >
 > * Create a new branch `<Your_GitHub_username>`
