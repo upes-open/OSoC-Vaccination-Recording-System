@@ -9,7 +9,7 @@
 
 
 
-![GitHub contributors](https://img.shields.io/github/contributors/upes-open/OSoC-Ambulance-Tracking-App) ![GitHub forks](https://img.shields.io/github/forks/upes-open/OSoC-Ambulance-Tracking-App) ![GitHub Repo stars](https://img.shields.io/github/stars/upes-open/OSoC-Ambulance-Tracking-App) ![GitHub issues](https://img.shields.io/github/issues/upes-open/OSoC-Ambulance-Tracking-App)
+![GitHub contributors](https://img.shields.io/github/contributors/upes-open/OSoC-Vaccination-Recording-System) ![GitHub forks](https://img.shields.io/github/forks/upes-open/OSoC-Vaccination-Recording-System) ![GitHub Repo stars](https://img.shields.io/github/stars/upes-open/OSoC-Vaccination-Recording-System) ![GitHub issues](https://img.shields.io/github/issues/upes-open/OSoC-Vaccination-Recording-System)
 
 <!--- contributor banner: https://shields.io/badges/git-hub-contributors
 fork banner: https://shields.io/badges/git-hub-forks
