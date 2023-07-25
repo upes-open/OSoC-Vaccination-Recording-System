@@ -56,7 +56,7 @@ function Dashboard() {
         </div>
         <div className='searchRecods'>
             <div class="col-sm-9 mb-3">
-                 <input type="email" class="form-control" id="name" aria-describedby="searchbar" placeholder='Search for records....' />
+                 <input type="text" class=" serachInput form-control" id="name" aria-describedby="searchbar" placeholder='Search for records....' />
             </div>
             <div style={{display:'flex'}} class="col-sm-4">
                 <label  style={{width: '10rem'}} for="sort">Sort By: </label>
