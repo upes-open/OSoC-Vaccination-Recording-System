@@ -1,9 +1,5 @@
 .bdy{
     background-color: #BDE4F4;
-    /* height: 100vh; */
-    /* position:absolute;
-    top: 0;
-    left: 0; */
 }
 
 .nav {
@@ -13,19 +9,13 @@
     border: 2px solid black;    
 }
 
-.logo {
-    /* border: 2px solid black; */
-}
 .links {
     display: flex;
-    /* padding: 1rem; */
-    /* border: 2px solid black; */
     align-items: center;
 }
 
 ul li {
     display: inline;
-    /* border: 2px solid black; */
     margin: 1rem 4rem;
 
 }
