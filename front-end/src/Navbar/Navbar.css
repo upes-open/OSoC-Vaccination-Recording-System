@@ -1,0 +1,21 @@
+.bdy{
+    background-color: #BDE4F4;
+}
+
+.nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;    
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    display: inline;
+    margin: 1rem 4rem;
+
+}
