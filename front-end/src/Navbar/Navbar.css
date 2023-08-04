@@ -1,21 +1,47 @@
-.bdy{
-    background-color: #BDE4F4;
+.bdy {
+	background-color: #bde4f4;
 }
 
 .nav {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid black;    
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid black;
+}
+
+.logo {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.logo-img {
+	height: 4rem;
 }
 
 .links {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
-ul li {
-    display: inline;
-    margin: 1rem 4rem;
+a {
+    text-decoration: none;
+	display: inline;
+	margin: 1rem 4rem;
+	color: black;
+}
 
+a:hover {
+	color: #2bbffa;
+}
+button {
+	display: inline;
+	margin: 1rem 4rem;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+}
+
+button:hover {
+    background-color: #bde4f4;
 }
