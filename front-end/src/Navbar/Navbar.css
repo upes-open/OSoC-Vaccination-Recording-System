@@ -1,10 +1,11 @@
 .bdy {
 	background-color: #bde4f4;
+	display: flex;
+	flex-direction: column;
 }
 
 .nav {
 	background-color: #ffffff;
-	display: flex;
 	justify-content: space-between;
 	border: 2px solid black;
 }
@@ -25,23 +26,40 @@
 	align-items: center;
 }
 
-a {
-    text-decoration: none;
+.anchor-nav {
+	text-decoration: none;
 	display: inline;
 	margin: 1rem 4rem;
 	color: black;
 }
 
-a:hover {
+.anchor-nav:hover {
 	color: #2bbffa;
 }
-button {
+.logout-btn {
 	display: inline;
 	margin: 1rem 4rem;
 	padding-left: 0.3rem;
 	padding-right: 0.3rem;
 }
 
-button:hover {
-    background-color: #bde4f4;
+.logout-btn:hover {
+	background-color: #ff6e6e;
+}
+
+.username {
+	padding: 1rem;
+}
+
+.heading,
+.username {
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+.username {
+	font-weight: normal;
+}
+.username-span {
+	font-weight: bold;
 }
