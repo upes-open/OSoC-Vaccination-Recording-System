@@ -26,6 +26,7 @@ function scheduleReminderEmail(name,vaccinationType,date, time, description) {
       pass: process.env.PASSWORD,
     },
   });
+  console.log(name,vaccinationType,date, time, description)
 
   // Calculate the date and time for the reminder email (e.g., 24 hours before the appointment)
   const appointmentDateTime = moment(`${date} ${time}`, "YYYY-MM-DD HH:mm");

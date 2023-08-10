@@ -14,3 +14,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 5rem;
+}
+
+.appointment-form {
+  width: 50rem;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* max-width: 300px; */
+  margin: 0 auto;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}

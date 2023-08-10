@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../index.css";
+import "../index.css"; // Make sure to import your global CSS here
+
 const AppointmentForm = () => {
   const [appointment, setAppointment] = useState({
     date: "",
-    time: "", // Added time field
+    time: "",
     description: "",
     name: "",
     dob: "",
@@ -12,7 +13,7 @@ const AppointmentForm = () => {
     preferredMethod: "Email",
     vaccinationType: "",
   });
-
+  console.log(appointment)
   const port = process.env.REACT_APP_API_PORT || 3001;
 
   const handleSubmit = async (e) => {
@@ -27,7 +28,7 @@ const AppointmentForm = () => {
 
     // Send the appointment data to the server
     axios
-      .post(`http://localhost:5000/appointment`, appointment)
+      .post(`http://localhost:${port}/appointment`, appointment)
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
   };
@@ -38,97 +39,91 @@ const AppointmentForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <form
-        onSubmit={handleSubmit}
-        className="p-4 max-w-sm bg-green-400 shadow-md rounded-lg"
-      >
-        <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Name:</label>
+    <div className="form-container">
+      <form onSubmit={handleSubmit} className="appointment-form">
+        <div className="form-field">
+          <label className="label">Name:</label>
           <input
             type="text"
             name="name"
             value={appointment.name}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
+            className="input"
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Date of Birth:</label>
+        <div className="form-field">
+          <label className="label">Date of Birth:</label>
           <input
             type="date"
             name="dob"
             value={appointment.dob}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
+            className="input"
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Contact:</label>
+        <div className="form-field">
+          <label className="label">Contact:</label>
           <input
             type="text"
             name="contact"
             value={appointment.contact}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
+            className="input"
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Preferred Method of Communication:</label>
+        <div className="form-field">
+          <label className="label">Preferred Method of Communication:</label>
           <select
             name="preferredMethod"
             value={appointment.preferredMethod}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
+            className="input"
           >
             <option value="Email">Email</option>
             <option value="SMS">SMS</option>
           </select>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Vaccination Type:</label>
+        <div className="form-field">
+          <label className="label">Vaccination Type:</label>
           <input
             type="text"
             name="vaccinationType"
             value={appointment.vaccinationType}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
+            className="input"
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Vaccination Date:</label>
+        <div className="form-field">
+          <label className="label">Vaccination Date:</label>
           <input
             type="date"
             name="date"
             value={appointment.date}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
+            className="input"
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Vaccination Time:</label>
+        <div className="form-field">
+          <label className="label">Vaccination Time:</label>
           <input
             type="time"
             name="time"
             value={appointment.time}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
+            className="input"
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Additional Notes/Comments:</label>
+        <div className="form-field">
+          <label className="label">Additional Notes/Comments:</label>
           <textarea
             name="description"
             value={appointment.description}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
+            className="input"
             rows="3"
           />
         </div>
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
+        <button type="submit" className="submit-button">
           Add Appointment
         </button>
       </form>
