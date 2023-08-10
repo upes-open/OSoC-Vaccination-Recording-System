@@ -1,11 +1,14 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const moment = require("moment");
 const cors = require("cors");
 const app = express();
 const PORT = 5000;
+const schema_looker = require('../schema/schema');
 require("dotenv").config({ path: "../../.env.local" });
+
 
 // Middleware
 app.use(bodyParser.json());
@@ -13,9 +16,19 @@ app.use(cors());
 
 // Dummy database to store appointments (replace this with a real database)
 const appointments = [];
-// console.log(process.env.PASSWORD);
-// console.log(process.env.USER);
 
+const db =process.env.REACT_APP_MONGO_URI;
+
+mongoose
+  .connect(db, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    autoIndex: true,
+  })
+  .then(() => {
+    console.log("DB connected successfully");
+  });
+// console.log(db);
 // Schedule the reminder email to be sent before the appointment date
 function scheduleReminderEmail(name,vaccinationType,date, time, description) {
   // Replace the transporter options with your email credentials
@@ -56,19 +69,32 @@ function scheduleReminderEmail(name,vaccinationType,date, time, description) {
   }, timeRemaining);
 }
 
+
 // API endpoint to create a new appointment
 app.post("/appointment", (req, res) => {
+  schema_looker.create(req.body)
   const { name,vaccinationType,date, time, description } = req.body;
   const newAppointment = { name,vaccinationType,date, time, description };
   appointments.push(newAppointment);
-
   // Schedule the reminder email
   scheduleReminderEmail(name,vaccinationType,date, time, description);
-
   res.status(201).json({ message: "Appointment created successfully!" });
+  
 });
+
 
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+app.get("/allvaccines",(req,res) => {
+  schema_looker.find()
+  .then((data) => {
+    res.status(200).send(data);
+    // console.log(data);
+  })
+  .catch((err) => {
+    res.status(500).send(err);
+  });
+})
