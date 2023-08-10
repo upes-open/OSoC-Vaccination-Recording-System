@@ -5,7 +5,7 @@ const moment = require("moment");
 const cors = require("cors");
 const app = express();
 const PORT = 5000;
-require("dotenv").config({ path: "../.env.local" });
+require("dotenv").config({ path: "../../.env.local" });
 
 // Middleware
 app.use(bodyParser.json());
@@ -13,8 +13,8 @@ app.use(cors());
 
 // Dummy database to store appointments (replace this with a real database)
 const appointments = [];
-console.log(process.env.PASSWORD);
-console.log(process.env.USER);
+// console.log(process.env.PASSWORD);
+// console.log(process.env.USER);
 
 // Schedule the reminder email to be sent before the appointment date
 function scheduleReminderEmail(name,vaccinationType,date, time, description) {
