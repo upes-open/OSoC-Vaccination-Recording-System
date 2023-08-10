@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+// import Files from "../../files";
 import "react-toastify/dist/ReactToastify.css";
 import "../index.css"; // Make sure to import your global CSS here
-require("dotenv").config({ path: "../../.env.local" });
+require("dotenv").config({ path: "../../../.env.local" });
 
 const AppointmentForm = () => {
   const [appointment, setAppointment] = useState({
@@ -17,8 +18,8 @@ const AppointmentForm = () => {
     vaccinationType: "",
   });
 //   console.log(appointment);
-  const port = process.env.REACT_APP_API_PORT ||3001;
-//   console.log(port)
+  const port = process.env.REACT_APP_API_PORT;
+  console.log(port)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
