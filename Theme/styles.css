@@ -16,14 +16,11 @@
     border-radius: 50%;
 }
 
-
-/* Add some global styles for the body */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Improve the header styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -46,7 +43,6 @@ p{
     vertical-align: middle;
 }
 
-/* Style the theme switch */
 .switch {
     position: relative;
     display: inline-block;
