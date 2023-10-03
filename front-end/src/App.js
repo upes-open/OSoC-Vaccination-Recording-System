@@ -7,6 +7,7 @@ import Navbar from "./Navbar/Navbar";
 import VaccinesRecord from "./getVaccinationRecord/getRecord";
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import AppointmentForm from "./Remainder/Remainder";
+import VaccinationRecordSystem from "./login and sign up/login";
 function App() {
   return (
     <div>
@@ -14,6 +15,7 @@ function App() {
 
       <BrowserRouter>
         <Routes>
+        <Route path="/login" element={<VaccinationRecordSystem />}></Route>
           <Route path="/landing" element={<Dashboard />}></Route>
           <Route path="/appointment" element={<AppointmentForm />}></Route>
           <Route path="/allvaccine" element={<VaccinesRecord />}></Route>
