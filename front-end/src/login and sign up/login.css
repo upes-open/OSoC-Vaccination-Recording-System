@@ -43,7 +43,7 @@ a {
 }
 .button {
   padding: 6px 24px;
-  border: 2px solid black
+  border: 2px solid black;
   background: transparent;
   border-radius: 6px;
   cursor: pointer;
@@ -96,9 +96,6 @@ a {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
-}
-.signup_form {
-  display: none;
 }
 .form_container.active .signup_form {
   display: block;
